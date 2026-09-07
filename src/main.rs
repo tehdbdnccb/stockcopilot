@@ -1,9 +1,14 @@
+mod application;
+mod domain;
+mod infrastructure;
+mod presentation;
+
 use axum::{
     routing::{get, post},
-    Router, Json,
+    Router,
 };
-use serde::{Deserialize, Serialize};
 use std::net::SocketAddr;
+use presentation::handlers::{compile_handler, validate_handler};
 
 #[tokio::main]
 async fn main() {
