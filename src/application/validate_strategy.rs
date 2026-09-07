@@ -1,4 +1,5 @@
 use crate::domain::strategy::StrategyPolicy;
+use serde::Serialize;
 
 #[derive(Debug, Serialize)]
 pub struct ValidationResult {
